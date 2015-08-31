@@ -56,13 +56,13 @@ public class SearchServlet extends HttpServlet {
 
 			String search = request.getParameter("lastname");
 			String q="select t from DemoCustomer t where t.custFirstName LIKE \"%"+search+"%\"";
-
+			//System.out.println(q);
 			TypedQuery<DemoCustomer>bq =em.createQuery(q,DemoCustomer.class);
 
 			List<DemoCustomer> list=bq.getResultList();
 			message+="<table class=\"table table-hover\"><tr><td><b>People Found </td></tr>";
 			for(DemoCustomer temp:list){
-				message+="<td>"+temp.getCustFirstName()+" "+temp.getCustLastName()+"</td>";
+				message+="<td><a href=\"GetCustomer?name="+temp.getCustFirstName() +"\">"+temp.getCustFirstName()+"</a></td>";
 				message+="<td>"+temp.getCustStreetAddress1()+"</td></tr>";
 			}
 			message+="</table>";

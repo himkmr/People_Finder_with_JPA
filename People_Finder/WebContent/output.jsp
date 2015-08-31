@@ -16,13 +16,10 @@
 <h1>People Finder with JPA</h1>
 </div>
 <nav class="navbar navbar-inverse">
-<div class="container">
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 <ul class="nav navbar-nav">
 <li><a href="index.html">HOME</a></li>
-
 </ul></div>
-</div>
 </nav><div style="text-align:center">
 <br>
 ${message}</div>
